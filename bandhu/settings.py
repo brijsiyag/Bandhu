@@ -84,26 +84,26 @@ WSGI_APPLICATION = 'bandhu.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'NAME': config("DB_NAME"),
-        'ENGINE': 'django.db.backends.mysql',
-        'USER': config("DB_USER"),
-        'PASSWORD': config("DB_PASS"),
-        'HOST' : config("DB_HOST"),
-        'OPTIONS': {
-          'autocommit': True,
-          'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'NAME': config("DB_NAME"),
+#         'ENGINE': 'django.db.backends.mysql',
+#         'USER': config("DB_USER"),
+#         'PASSWORD': config("DB_PASS"),
+#         'HOST' : config("DB_HOST"),
+#         'OPTIONS': {
+#           'autocommit': True,
+#           'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#         },
+#     }
+# }
 
 
 # Password validation
